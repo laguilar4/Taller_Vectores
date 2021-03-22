@@ -102,23 +102,20 @@ else:
     print('Por favor digite una longitud de vector que sea par')
 #Punto6
 VectorNum7 = []
-Mitad1 = []
-Mitad2 = []
 Elementos6 = int(input('Digite la cantidad de elementos para los vectores: '))
-par2 = int(Elementos6 / 2)
 if(Elementos6 % 2 == 0):
-    for i in range(par2):
-        num8 = float(input(f'Digite el numero de la primera mitad del vector en la posicion: {i} '))
-        VectorNum7.append(num8)
-        Mitad1.append(num8)
-    for i in range(par2):
-        num9 = float(input(f'Digite el numero de la segunda mitad del vector en la posicion: {i} '))
+    for i in range(Elementos6):
+        num9 = float(input(f'Digite el numero del vector en la posicion: {i} '))
         VectorNum7.append(num9)
-        Mitad2.append(num9)
-    if(Mitad1 == Mitad2[::-1]):
-        print(f'El vector: {VectorNum7} es simetrico. La primera mitad es: {Mitad1} y la segunda: {Mitad2}')
+    medio = int(len(VectorNum7) / 2)
+    primeramitad = VectorNum7[:medio]
+    segundamitad = VectorNum7[medio:]
+    if(primeramitad == segundamitad[::-1]):
+        print(f'El vector: {VectorNum7} es simetrico')
+    else:
+        print(f'El vector: {VectorNum7} no es simetrico')
 elif(Elementos6 <= 1):
-    print('Digite un numero por encima de 1 y 0')
+    print('Digite un numero mayor a 1')
 else:
     for i in range(Elementos6):
         num10 = float(input(f'Digite el numero del vector en la posicion: {i} '))
@@ -126,13 +123,31 @@ else:
     print(f'El vector es : {VectorNum7}')
     medio = int(len(VectorNum7) / 2)
     VectorNum7.pop(medio)
-    print(f'Ignorando el numero del medio quedaria: {VectorNum7}')
+    print(f'Ignorando el numero del medio seria asi: {VectorNum7}')
     primeramitad = VectorNum7[:medio]
     segundamitad = VectorNum7[medio:]
     if(primeramitad == segundamitad[::-1]):
-        print('El vector es simetrico')
+        print(f'El vector sin el numero del medio: {VectorNum7} es simetrico')
+    else:
+        print('El vector no es simetrico')
 #Punto7
-
-
-
+VectorA = []
+VectorB = []
+ElementosVectores = int(input('Digite la cantidad de elementos para los vectores: '))
+for i in range(ElementosVectores):
+    numeroA = float(input(f'Digite el numero del vector A en la posicion: {i} '))
+    VectorA.append(numeroA)
+for i in range(ElementosVectores):
+    numeroB = float(input(f'Digite el numero del vector B en la posicion: {i} '))
+    VectorB.append(numeroB)
+Va = set(VectorA)
+Vb = set(VectorB)
+union = Va | Vb
+interseccion = Va & Vb  
+diferenciaAB = Va - Vb
+diferenciaBA = Vb - Va
+print(f'La union tiene como elementos : {union} ')
+print(f'La interseccion tiene como elementos : {interseccion} ')
+print(f'La diferencia de A - B tiene como elementos : {diferenciaAB} ')
+print(f'La diferencia de B - A tiene como elementos : {diferenciaBA} ')
 
