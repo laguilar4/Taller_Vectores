@@ -7,7 +7,7 @@ def es_primo(num):
     print('Es un numero primo')
     VectorPrimo.append(num)
     return True
-#Punto1
+# Punto1
 VectorNum = []
 Sumatoria = 0
 Productoria = 1
@@ -26,7 +26,7 @@ print(f'La sumatoria es: {Sumatoria} y su vector es: {VectorSumatoria}')
 print(f'La productoria es: {Productoria} y su vector es: {VectorProductoria}')
 print(f'El elemento de menor valor del vector es: {min(VectorNum)}')
 print(f'El elemento de mayor valor del vector es: {max(VectorNum)}')
-#Punto2
+# Punto2
 VectorNum2 = []
 VectorPar = []
 VectorImpar = []
@@ -41,12 +41,11 @@ for i in range(Elementos2):
     else: 
         es_primo(num2)
         VectorImpar.append(num2)
-        
 print(f'Los elementos del vector son : {VectorNum2}')
 print(f'Los numeros pares son : {VectorPar}')
 print(f'Los numeros impares son : {VectorImpar}')
 print(f'Los numeros primos son : {VectorPrimo}')
-#Punto3
+# Punto3
 VectorNum3 = []
 VectorNum4 = []
 VectorSuma = []
@@ -65,21 +64,21 @@ print(f'Los elementos del vector 1 son: {VectorNum3}')
 print(f'Los elementos del vector 2 son: {VectorNum4}')
 print(f'El resultado de su suma es : {VectorSuma}')
 print(f'El resultado de su resta es : {VectorResta}')
-#Punto4
+# Punto4
 VectorNum5 = []
-Elementos4 = int(input('Digite la cantidad de elementos para los vectores: '))
+Elementos4 = int(input('Digite la cantidad de elementos del vector: '))
 for i in range(Elementos4):
     num5 = float(input(f'Digite el numero del vector en la posicion: {i} '))
     VectorNum5.append(num5)
 print(f'El numero que mas se repite es: {mode(VectorNum5)}')
-#Punto5
+# Punto5
 VectorNum6 = []
 VectorProductoria2 = []
 VectorSumatoria2 = []
 VectorTotal = []
 Productoria2 = 1
 Sumatoria2 = 0
-Elementos5 = int(input('Digite la cantidad de elementos para los vectores: '))
+Elementos5 = int(input('Digite la cantidad de elementos del vector: '))
 par = int(Elementos5 / 2)
 if(Elementos5 % 2 == 0):
     for i in range(par):
@@ -100,9 +99,9 @@ if(Elementos5 % 2 == 0):
     print(f'El vector resultante es : {VectorTotal}')
 else:
     print('Por favor digite una longitud de vector que sea par')
-#Punto6
+# Punto6
 VectorNum7 = []
-Elementos6 = int(input('Digite la cantidad de elementos para los vectores: '))
+Elementos6 = int(input('Digite la cantidad de elementos del vector: '))
 if(Elementos6 % 2 == 0):
     for i in range(Elementos6):
         num9 = float(input(f'Digite el numero del vector en la posicion: {i} '))
@@ -130,7 +129,7 @@ else:
         print(f'El vector sin el numero del medio: {VectorNum7} es simetrico')
     else:
         print('El vector no es simetrico')
-#Punto7
+# Punto7
 VectorA = []
 VectorB = []
 ElementosVectores = int(input('Digite la cantidad de elementos para los vectores: '))
@@ -150,4 +149,3 @@ print(f'La union tiene como elementos : {union} ')
 print(f'La interseccion tiene como elementos : {interseccion} ')
 print(f'La diferencia de A - B tiene como elementos : {diferenciaAB} ')
 print(f'La diferencia de B - A tiene como elementos : {diferenciaBA} ')
-
